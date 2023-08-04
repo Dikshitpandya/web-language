@@ -1,0 +1,34 @@
+<td align="center">
+      <figure>
+        <td align="center">
+            <figure>
+             <a href="stoberi.html">
+                 <img src="image1/stoberi.jpg" height="400" loading="lazy">
+             </a>
+         <figcaption>stoberi juice</figcaption>
+            </figure>
+        </td>
+
+
+        <table>
+            <tr>
+           <td align="center">
+               <figure>
+            <figcaption></figcaption>
+               </figure>
+           </td>
+       
+               <td align="center">
+                <figure>
+              <figcaption></figcaption>
+                 </figure>
+              </td>
+       
+               <td align="center">
+               <figure>
+               <figcaption></figcaption>
+               </figure>
+              </td>
+            </tr>
+           
+         </table>
