@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="mystyle.min.css" /> -->
+    <link rel="stylesheet" href="mystyle.css" />
+</head>
+
+<body>
+    <header id="pageheading">
+        <img src="images/icon.png" alt="">
+        <span class="sitename">the easylearn academy</span>
+        <ul class="menu">
+            <li><a href="lesson5.html">Home</a></li>
+            <li><a href="course.html">Course</a></li>
+            <li><a href="lesson5.html">Product</a></li>
+            <li><a href="lesson5.html">About us</a></li>
+            <li><a href="lesson5.html">Contact us</a></li>
+        </ul>
+    </header>
+    <div id="pagecontent">
+        <h1>Page heading</h1>
+        <article>
+            <header>
+                <h2>Article heading</h2>
+            </header>
+            <div>
+                <img src="https://picsum.photos/300" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nihil ut, beatae eum rerum eligendi
+                    nam. Ipsam similique illo nemo pariatur, nesciunt iusto! Suscipit, laborum fuga recusandae odio
+                    quaerat vitae ea facere possimus harum, optio deserunt excepturi error repudiandae aliquid.
+                    Provident cumque in ex quia consectetur sapiente odio reiciendis tempore incidunt? Soluta
+                    exercitationem, vitae, eum et velit ea maxime repellendus corporis consequuntur dolore eos suscipit
+                    at ipsum harum voluptate ipsam, cumque nam pariatur dolores optio temporibus. Necessitatibus, qui
+                    molestias. Beatae, quisquam quas ea doloremque ipsa mollitia. Corrupti eum assumenda odio
+                    perspiciatis, architecto tempore est? Magni minima eum nisi tenetur quae?
+                </p>
+            </div>
+            <footer>
+                <p>Written By :- Ankit Patel</p>
+            </footer>
+        </article>
+        <article>
+            <header>
+                <h2>Article heading</h2>
+            </header>
+            <div>
+                <img src="https://picsum.photos/300?random=2" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nihil ut, beatae eum rerum eligendi
+                    nam. Ipsam similique illo nemo pariatur, nesciunt iusto! Suscipit, laborum fuga recusandae odio
+                    quaerat vitae ea facere possimus harum, optio deserunt excepturi error repudiandae aliquid.
+                    Provident cumque in ex quia consectetur sapiente odio reiciendis tempore incidunt? Soluta
+                    exercitationem, vitae, eum et velit ea maxime repellendus corporis consequuntur dolore eos suscipit
+                    at ipsum harum voluptate ipsam, cumque nam pariatur dolores optio temporibus. Necessitatibus, qui
+                    molestias. Beatae, quisquam quas ea doloremque ipsa mollitia. Corrupti eum assumenda odio
+                    perspiciatis, architecto tempore est? Magni minima eum nisi tenetur quae?
+                </p>
+            </div>
+            <footer>
+                <p>Written By :- Ankit Patel</p>
+            </footer>
+        </article>
+        <article>
+            <header>
+                <h2>Article heading</h2>
+            </header>
+            <div>
+                <img src="https://picsum.photos/300?random=3" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nihil ut, beatae eum rerum eligendi
+                    nam. Ipsam similique illo nemo pariatur, nesciunt iusto! Suscipit, laborum fuga recusandae odio
+                    quaerat vitae ea facere possimus harum, optio deserunt excepturi error repudiandae aliquid.
+                    Provident cumque in ex quia consectetur sapiente odio reiciendis tempore incidunt? Soluta
+                    exercitationem, vitae, eum et velit ea maxime repellendus corporis consequuntur dolore eos suscipit
+                    at ipsum harum voluptate ipsam, cumque nam pariatur dolores optio temporibus. Necessitatibus, qui
+                    molestias. Beatae, quisquam quas ea doloremque ipsa mollitia. Corrupti eum assumenda odio
+                    perspiciatis, architecto tempore est? Magni minima eum nisi tenetur quae?
+                </p>
+            </div>
+            <footer>
+                <p>Written By :- Ankit Patel</p>
+            </footer>
+        </article>
+        <article>
+            <header>
+                <h2>Article heading</h2>
+            </header>
+            <div>
+                <img src="https://picsum.photos/300?random=4" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nihil ut, beatae eum rerum eligendi
+                    nam. Ipsam similique illo nemo pariatur, nesciunt iusto! Suscipit, laborum fuga recusandae odio
+                    quaerat
+                    vitae ea facere possimus harum, optio deserunt excepturi error repudiandae aliquid. Provident cumque
+                    in
+                    ex quia consectetur sapiente odio reiciendis tempore incidunt? Soluta exercitationem, vitae, eum et
+                    velit ea maxime repellendus corporis consequuntur dolore eos suscipit at ipsum harum voluptate
+                    ipsam,
+                    cumque nam pariatur dolores optio temporibus. Necessitatibus, qui molestias. Beatae, quisquam quas
+                    ea
+                    doloremque ipsa mollitia. Corrupti eum assumenda odio perspiciatis, architecto tempore est? Magni
+                    minima
+                    eum nisi tenetur quae?
+
+                </p>
+            </div>
+            <footer>
+                <p>Written By :- Ankit Patel</p>
+            </footer>
+        </article>
+        <article>
+            <header>
+                <h2>Article heading</h2>
+            </header>
+            <div>
+                <img src="https://picsum.photos/300" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nihil ut, beatae eum rerum eligendi
+                    nam. Ipsam similique illo nemo pariatur, nesciunt iusto! Suscipit, laborum fuga recusandae odio
+                    quaerat
+                    vitae ea facere possimus harum, optio deserunt excepturi error repudiandae aliquid. Provident cumque
+                    in
+                    ex quia consectetur sapiente odio reiciendis tempore incidunt? Soluta exercitationem, vitae, eum et
+                    velit ea maxime repellendus corporis consequuntur dolore eos suscipit at ipsum harum voluptate
+                    ipsam,
+                    cumque nam pariatur dolores optio temporibus. Necessitatibus, qui molestias. Beatae, quisquam quas
+                    ea
+                    doloremque ipsa mollitia. Corrupti eum assumenda odio perspiciatis, architecto tempore est? Magni
+                    minima
+                    eum nisi tenetur quae?
+
+                </p>
+            </div>
+            <footer>
+                <p>Written By :- Ankit Patel</p>
+            </footer>
+        </article>
+    </div>
+    <footer id="pagefooter">
+
+    </footer>
+</body>
+
+</html>
+NL82KKQ*S7M2>nF

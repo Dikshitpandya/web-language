@@ -1,0 +1,195 @@
+ * {
+     margin: 0px;
+     padding: 0px;
+     letter-spacing: 1px;
+     font-family: 'Montserrat', sans-serif;
+ }
+
+ body {
+     background-color: #FCF6F5;
+ }
+
+ #pageheading {
+     background-color: #990011;
+
+     display: flex;
+     justify-content: space-between;
+     /* horizontal allignment */
+     align-items: center;
+     /* vertical allignment */
+     padding: 10px;
+     left: 0px;
+     top: 0px;
+     position: sticky;
+     color: white
+ }
+
+ /* home */
+ .menu {
+     display: flex;
+     list-style-type: none;
+ }
+
+ .sitename {
+     font-size: 30px;
+     text-transform: uppercase;
+     color: white;
+ }
+
+ .menu>li {
+     margin-right: 10px;
+ }
+
+ .menu>li>a:link,
+ .menu>li>a:visited
+
+ /* pseudo class */
+     {
+     background-color: white;
+     color: #990011;
+     padding: 5px 15px;
+     border-radius: 10px;
+     font-size: large;
+     text-decoration: none;
+ }
+
+ .menu>li>a:hover {
+     color: red;
+     background-color: yellow;
+ }
+
+ .menu>li>a:active {
+     background-color: blue;
+     color: white;
+ }
+
+ #pagecontent {
+     padding: 20px 60px;
+ }
+
+ #pagecontent>article {
+     border: 1px solid #990011;
+     margin-bottom: 20px;
+     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+ }
+
+ #pagecontent>article>header {
+     background-color: #990011;
+     padding: 20px;
+ }
+
+ /* //#pagecontent > article > header > h2 */
+ /* //#pagecontent > article:nth-child(2) > header:nth-child(1) > h2:nth-child(1) */
+ #pagecontent>article>header>h2:hover {
+     color: yellow !important;
+ }
+
+ #pagecontent>article>header>h2 {
+     color: white;
+     text-transform: uppercase;
+ }
+
+ #pagecontent>article>div {
+     display: flex;
+     padding-left: 10px;
+     padding-right: 10px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+ }
+
+ #pagecontent>article>div>p {
+     padding: 0px 0px 0px 20px;
+     /* top right bottom left */
+     text-align: justify;
+     line-height: 150%;
+     word-spacing: 5px;
+     text-indent: 50px;
+ }
+
+ #pagecontent>article>div>img {
+     box-shadow: 5px 5px 5px gray;
+     border-radius: 300px;
+ }
+
+ #pagecontent>article>footer {
+     background-color: #990011;
+     color: white;
+     padding: 20px;
+ }
+
+ /* course */
+ #courses {
+     margin-top: 20px;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 10px;
+ }
+
+ #courses>article {
+     border: 1px solid brown;
+     border-radius: 10px;
+     box-sizing: border-box;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+ }
+
+ #courses>article>header {
+     background-color: #990011;
+     color: white;
+     padding: 10px 5px;
+     font-weight: bold;
+ }
+
+ .content>p {
+     padding-left: 10px;
+     padding-right: 10px;
+     text-align: justify;
+ }
+
+ #courses>article>div>img {
+     width: 100%;
+ }
+
+ /* ##Device = Desktops ##Screen = 1281px to higher resolution desktop */
+ @media (min-width: 1281px) {
+     /* code in this block will be applied only if device width>1281 */
+     #courses>article
+     {
+         width: calc(25% - 8px);
+     }
+ }
+
+ /* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+ @media (min-width: 1025px) and (max-width: 1280px) {
+     /* code in this block will be applied only if device width>1025 and <1280 */
+     #courses>article
+     {
+         width: calc(25% - 8px);
+     }
+ }
+
+ /* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */
+ @media (min-width: 768px) and (max-width: 1024px) {
+     /* code in this block will be applied only if device width>768 and <1024 */
+     #courses>article
+    {
+        width: calc(33% - 5px);
+    }
+ }
+
+ /* ##Device = Low Resolution Tablets,  ##Screen = B/w 481px to 767px */
+ @media (min-width: 481px) and (max-width: 767px) {
+     /* code in this block will be applied only if device width>481 and <767 */
+    #courses>article
+    {
+        width: calc(50% - 5px);
+    }
+ }
+
+ /*  ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */
+ @media (min-width: 320px) and (max-width: 480px) {
+     /* code in this block will be applied only if device width>320 and <480 */
+    #courses>article
+    {
+        width: 100%;
+    }
+ }

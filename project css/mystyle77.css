@@ -1,0 +1,122 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* ઉપર ની ઇફેક્ટ દરેક માં લગાવવી ફરજિયાત છે *{}માં લગાવેલ ઇફેક્ટ આખા ટેગ ને લાગુ \પડે છે  */
+body {
+    background-color: #ffffff;
+}
+
+#pageheading {
+    background-color: #d5d6e6;
+    display: flex;
+    /* કોય પણ  2 બ્લોક ટેગ ને પાસે પાસે લાવવા માટે ઉપર ની ઇફેક્ટ વપરાય છે   */
+    justify-content: space-between;
+    /* આ ઉપર ની ઇફેક્ટ નો ઉપયોગ કરી ને લઈને માં આવેલ  ટેગ ને સેટ કરી શકાય છે  exampal=img  titel   menu */
+    align-items: center;
+    /* ઉપર ની ઇફેક્ટ આપવા થી તે સેંટર માં આવે છે  */
+    padding: 10px;
+    /* ઉપર ની ઇફેક્ટ આપવાથી ચારે બાજુ જગ્યા મૂકી શકાય છે  */
+    left: 0px;
+    top: 0px;
+    position: sticky;
+    /* ઉપર ની ઇફેક્ટ આપવાથી હેડિંગ કે કોય પણ ટેગ ત્યાં સ્થિર થાય છે તે scrool થતો નથી  */
+    color:#75c9b7;
+}
+body>ul{
+    background-color: #990011;
+    display: flex;
+    justify-content: space-between;
+}
+body>span{
+    text-size-adjust: 25px;
+    background-color: #990011;
+    text-transform: uppercase;
+     padding-left: 300px;
+}
+
+.menu {
+    /* કોય પણ ટેગ ને class લગાડ્યો હોય ત્યારે તેને સિલેક્ટ કરતી વખતે ઉપર પ્રમાણે (. + class name ) લખાય છે  */
+    display: flex;
+    list-style-type:none;
+     /* ઉપર ની ઇફેક્ટ આપવાથી મેનૂ માં જે નિશાની હોય છે તે દૂર કરી શકાય છે  */
+}
+
+.sitename {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #f9fcfb;
+}
+.menu>li{
+    margin-right: 10px;
+    color: white;
+}
+.menu>li>a:link,
+.menu>li>a:visited
+
+/* picudo class  */
+{
+    background-color: white;
+    color: #990011;
+    padding: 5px 15px;
+    /* line 54 લખવા થી તે મેનૂ ફરતે જે બોક્સ આવે છે તે વ્યવથિત કરી શકાય છે  */
+    border-radius: 10px;
+    /* line 55 લખવા થી જે મેનૂ હોય છે તેના બોક્સ ને જે ખૂણા હોય છે તે થોડા ગોળા કાર વાળ બને છે  */
+    font-size: large;
+    text-decoration: none;
+    /* line 59 લખવા થી તે મેનૂ ની નીચે જે લઈને આવે છે તે કાઢી શકાય છે  */
+}
+
+.menu>li>a:hover{
+    /* આ કમાન્ડ થી માઉસ પોઈંટર ટચ કારતા થતી એક્ટિવિટી ગોઠવી શકાય છે 
+    પરંતુ તેના માટે .menu>li>a:link, .menu>li>a:visited તે લઈને લખવી ફરજિયાત છે */
+    color: #990011;
+    /* text colour */
+    background-color: blueviolet;
+}
+
+.menu>li>a:active{
+    /* આ કમાન્ડ થી માઉસ પોઈંટર થી ક્લિક કારતા થતી ઇફેક્ટ ગોઠવી સકે છે 
+    તેના માટે .menu>li>a:link, .menu>li>a:visited .menu>li>a:hover તે લઈને લખવી ફરજિયાત છે */
+   background-color: rgb(67, 209, 11);
+   color: rgb(10, 10, 10);
+}
+#pagecontent>article{
+    border: 2px solid rosybrown;
+
+}
+#pagecontent>article>div{
+    display: flex;
+    /* line 47 લખવા થી 2 બ્લોક ટેગ ને પાસે પાસે લાવી શકાય છે  */
+    padding: 10px;
+}
+#pagecontent>article>div>img{
+    /* border-radius: 300px; */
+    align-content: center;
+}
+#pagecontent{
+    padding: 20px 60px;
+}
+#pagecontent>article>div>p{
+    padding: 0px 0px 0px 20px ;
+    text-align: justify;
+    /* line 55 લખવા થી પેરેગ્રાફ માં બધી લાઈન સરકહી થાય છે  */
+    line-height: 150%;
+    text-indent: 50px;
+    /*  line 58 તે લઈને લખવા થી પેરેગ્રાફ માં આગળ જગ્યા મૂકી શકાય છે  */
+}
+#pagecontent>article>header>h2{
+    color: aquamarine;
+    text-transform: uppercase;
+    background-color: rgb(93, 77, 185);
+    font-size: 30px;
+     padding: 10px;
+}
+#pagecontent>article>footer{
+    background-color: aqua;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}

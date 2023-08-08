@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body>article>table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    box-shadow: rgba(11, 219, 174, 0.56) 0px 22px 70px 4px;
+}
+body>article>table>caption {
+    color: white;
+    background-color: aqua;
+    border: 1px solid black;
+    border-collapse: collapse;
+    max-width: auto;
+    max-height: 70px;
+    padding: 10px;
+    height: 50px;
+}
+body>article>caption>h1{
+    color: violet;
+    background-color: #0a5071;
+}
+
+td {
+    border: 1px solid black;
+    height: 20px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: bottom;
+    color: gray;
+    margin: 20px;
+    padding-right: 20px;
+}
+
+td:hover {
+    color: rgb(31, 9, 233);
+    text-shadow: #0b0ebd;
+    
+}
+
+body>article>img {
+
+    width: 50%;
+    display: block;
+    margin: 0px auto;
+    padding-top: 50px;
+    height: 100%;
+    box-shadow: rgba(11, 219, 174, 0.56) 0px 22px 70px 4px;
+}
+
+body>article>h2 {
+    color: chocolate;
+    text-align: center;
+    padding: 20px;
+    background-color: aqua;
+    
+}
+
+body>article {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ---------------------------logo------------------------------ */
+body>div>img {
+    height: 10%;
+    width: 10%;
+}
+
+body>div>h2 {
+    color: #fff;
+    font-size: 50px;
+    padding-left: 100px;
+    padding-top: 30px;
+}
+
+body>div>ul>li>a {
+    display: flex;
+    padding-left: 30px;
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+
+}
+
+body>div>ul>li>a:hover {
+    color: red;
+    background-color: white;
+}
+
+body>div>ul {
+    display: flex;
+    list-style: none;
+    padding-left: 35%;
+    letter-spacing: 1px;
+    padding-top: 40px;
+    font-size: 20px;
+
+}
+#logo {
+    display: flex;
+    background-color: #0a5071;
+    position: sticky;
+}
+
+/* ------------------------------------peregraf teg----------------------------------------- */
+body>h3 {
+    color: #0a5071;
+    padding: 10px;
+    font-size: 35px;
+}
+
