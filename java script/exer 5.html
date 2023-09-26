@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>2nd technique to create object</h2>
+            </div>
+        </div>
+        <div class="row" id="output">
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="common.js"></script>
+    <script>
+        //2nd technique to create template
+        var Book = new Object({
+            name: '',
+            price: null,
+            author: '',
+            photo: '',
+            display: function () {
+                let output = $("output");
+                output.innerHTML += `<div class='col-lg-4'>
+            <div class='card shadow'>
+                <img src=${this.photo} class='card-img-top' alt='Book Image'>
+                <div class='card-body'>
+                    <h5 class='card-title'>name:- ${this.name}</h5>
+                    <p class='card-text'>captain: ${this.author}</p>
+                  
+                </div>
+            </div>
+        </div>`
+            }
+        });
+
+        //create object
+        //var object-name = Template-Name 
+        var b1 = Book;
+
+        b1.name = " Mumbai Indians (MI";
+        b1.captain = "Captain: Rohit Sharma ";
+        b1.photo = "https://cdn.bleacherreport.net/images/team_logos/328x328/mumbai_indians.png";
+        b1.display();
+
+        var b2 = Book;
+        b2.name = "Royal Challengers Bangalore (RCB)";
+        b1.captain = "Virat Kohli ";
+        b1.photo = "https://i.pinimg.com/736x/b5/77/df/b577df286c10d347b43a42be9fbc0170.jpg";
+        b2.display();
+
+        var b3 = Book;
+        b3.name = "Chennai Super Kings (CSK)";
+        b1.captain = "Captain: MS Dhoni";
+        b1.photo = " https://i.pinimg.com/474x/ca/09/92/ca0992cac6cf70a4d89bc8d62f547a89.jpg";
+        b3.display();
+
+        var b4 = Book;
+        b4.name = "Kolkata Knight Riders (KKR)";
+        b1.captain = "Eoin Morgan";
+        b1.photo = "https://cdn.wisden.com/wp-content/uploads/2023/03/KKR-scaled-e1680087163544-980x530.jpeg";
+        b4.display();
+
+        var b4 = Book;
+        b5.name = "Sunrisers Hyderabad (SRH)";
+        b1.captain = "Kane Williamson";
+        b1.photo = "https://english.cdn.zeenews.com/sites/default/files/2023/04/06/1179837-untitled-design-2023-04-06t234626.866.png";
+        b5.display();
+
+        var b4 = Book;
+        b6.name = "Rajasthan Royals (RR)";
+        b1.captain = "Sanju Samson";
+        b1.photo = "https://www.kreedon.com/wp-content/uploads/2019/12/i9dqu8b6b60udzuthc7a1qcbtaqgrf9p-696x696.webp";
+        b6.display();
+
+        var b4 = Book;
+        b7.name = "Delhi Capitals (DC) ";
+        b1.captain = "Rishabh Pant";
+        b1.photo = "https://www.delhicapitals.in/static-assets/waf-images/f3/2b/91/16-9/796-597/CBOjPNTEgc.jpg";
+        b7.display();
+
+        var b4 = Book;
+        b8.name = "Kings XI Punjab (now known as Punjab Kings, PBKS) ";
+        b1.captain = " KL Rahul";
+        b1.photo = "https://iplpro.in/wp-content/uploads/2023/04/Punjab-Kings-Players-bihar-cetbed-imnu.in_.jpeg";
+        b7.display();
+
+        b1.photo = "";
+        b8.display();
+
+    </script>
+</body>
+
+</html>
