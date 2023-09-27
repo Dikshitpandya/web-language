@@ -1,0 +1,131 @@
+<!-- create web page using bootstrap and jaavascript that will display multiplication table dynamically of given range. 
+start = 1 
+stop  = 10
+display card for each multiplier. display 4 such card for large screen, 3 card for medium screen and 2 card for small screen and 1 card for mobile
+
+develop EMI Calculator as per example 12_event_handling.html (1st, 2nd, 3rd method)
+
+develop BMI Calculator as per example 12_event_handling.html (1st, 2nd, 3rd method)
+
+
+
+develope web page as per screen shot shared in Whatsup. develop example according to 17_object4.html 
+
+create class KG which return Kilogram of grams given in constructor and it has method getKG which return KG. extends this class in Ton. which has method getTon that returns ton of grams given in constructor.
+
+create class meter which return meter of inches given in constructor and it has method getMeter which return meter. extends this class in KM. which has method getKM that returns km of inches given in constructor. extends KM class in Mile class which has method getMile that return miles of inches given in constructor -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Score Entry</title>
+    Add Bootstrap CSS link here
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Cricket Score Entry</h2>
+        <form id="scoreEntryForm">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Batsman</th>
+                        <th>Runs (1-6)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" class="form-control" name="batsmanName" required>
+                        </td>
+                        <td>
+                            <input type="number" class="form-control" name="runs" min="1" max="6" required>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" onclick="addScore()">Add</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <div id="scoreList">
+            <!-- Scores will be displayed here
+        </div>
+    </div>
+
+    <!-- Add Bootstrap and jQuery scripts here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function addScore() {
+            // Get the values from the form
+            const batsmanName = document.querySelector('input[name="batsmanName"]').value;
+            const runs = document.querySelector('input[name="runs"]').value;
+
+            // Validate runs (1-6)
+            if (runs < 1 || runs > 6) {
+                alert("Runs should be between 1 and 6.");
+                return;
+            }
+
+            // Create a new row for the table with the entered data
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${batsmanName}</td>
+                <td>${runs}</td>
+                <td><button type="button" class="btn btn-danger" onclick="deleteRow(this)">Delete</button></td>
+            `;
+
+            // Append the new row to the table
+            document.querySelector('tbody').appendChild(newRow);
+
+            // Reset the form inputs
+            document.querySelector('input[name="batsmanName"]').value = '';
+            document.querySelector('input[name="runs"]').value = '';
+        }
+
+        function deleteRow(button) {
+            // Delete the row when the delete button is clicked
+            button.closest('tr').remove();
+        }
+    </script>
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Select Dropdown</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Select an Item</h2>
+        <div class="form-group">
+            <label for="itemSelect">Select an item:</label>
+            <select class="form-control" id="itemSelect">
+                <option value="item1">Item 1</option>
+                <option value="item2">Item 2</option>
+                <option value="item3">Item 3</option>
+                <option value="item4">Item 4</option>
+                <option value="item5">Item 5</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap and jQuery scripts here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
