@@ -27,13 +27,13 @@ var createServer = http.createServer(function (request, response) {
         surename: "panot",
         gender: "true",
         email: "www.paraspanot1711@gmail.com"
-    }
+    };
     var f1 = {
         name: "harsh",
         surename: "bariya",
         gender: "true",
         email: "www.harshbariya711@gmail.com"
-    }
+    };
 });
 server.listen(5000);
 console.log("server is running at 5000 code")
