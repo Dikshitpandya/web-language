@@ -7,7 +7,7 @@ var server = http.createServer(function (request, response) {
         if (error != null) {
             response.write("file can not be read");
         }
-        else {``
+        else {
             response.write(FileContent);
         }
         response.end();
