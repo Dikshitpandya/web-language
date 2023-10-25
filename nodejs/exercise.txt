@@ -1,0 +1,9 @@
+
+2) create nodejs application to create local with following function 
+    getAmountInWords()
+    amount = 12345
+    output = one two three four five 
+create nodejs file to use above local module
+
+
+create nodejs application which will return html output. input is team name and output is player list. use wc2023 data.

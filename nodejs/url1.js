@@ -36,3 +36,6 @@ var server = http.createServer(function(request, response) {
 });
 server.listen(5000);
 console.log('server started on port 5000');
+
+// output jova mate url ma / pachi name lakho
+//  ex     localhost:5000/fruits
