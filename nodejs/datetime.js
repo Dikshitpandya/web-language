@@ -1,5 +1,5 @@
 var http = require("http");
-var my = require("./localmodule");
+var my = require("./loclamodual1");
 var server = http.createServer(function (request, response) {
     console.log("I got your request.....");
     console.log(my.getDate());
