@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Example of object cloning</h1> <hr/>
+    <b>use console to see output</b>
+    <script>
+        var car = {
+            name:'Honda',
+            price:1125000
+        };
+
+        //create copy of object 
+        console.log("before update");
+        console.log(car);
+        var copy_of_car = {}; //empty object
+        for(let key in car)
+        {
+            copy_of_car[key] = car[key];
+        }
+        car.name = "Audi";
+        copy_of_car.price = 1290000;
+        console.log("after update");
+        console.log(car);
+        console.log(copy_of_car);
+    </script>
+</body>
+</html>

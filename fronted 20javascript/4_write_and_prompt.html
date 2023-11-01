@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=5, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Write method and prompt method in javascript</h1>
+    <hr/>
+    <p><strong>Result of operations</strong></p>
+    <script>
+        var message = "enter number";
+        var defaultvalue = 1;
+
+        var first = prompt(message,defaultvalue);
+        var second = prompt(message,defaultvalue);
+        //convert variables value into float 
+        first = parseFloat(first);
+        second = parseFloat(second);
+
+
+        //mathematical operation 
+        var addition = first + second;
+        var substratction = first - second;
+        var multiplication = first * second;
+        var division = (first / second).toFixed(2);
+
+        document.write(addition,"<br/>",substratction,"<br/>",multiplication,"<br/>",division);
+
+        
+    </script>
+</body>
+</html>

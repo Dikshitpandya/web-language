@@ -1,0 +1,33 @@
+Sure, here are 10 JavaScript exercises that involve the concepts of Document Object Model (DOM) manipulation, event handling, and accessing user input using JavaScript. These exercises are meant to help you practice and understand these concepts better.
+
+1. *Change Background Color*n
+   Create a button that, when clicked, changes the background color of the entire page.
+
+2. *Toggle Visibility*
+   Create two buttons, "Show" and "Hide," which toggle the visibility of an HTML element when clicked.
+
+3. *Dynamic Content*
+   Create a form with an input field and a button. When the button is clicked, take the input value and display it on the page.
+
+4. *Countdown Timer*
+   Create a countdown timer that starts at a user-defined value and counts down to zero, updating the page in real-time.
+
+5. *To-Do List*
+   Create a to-do list where you can add and remove tasks. Each task should be represented as a list item in an unordered list.
+
+6. *Image Carousel*
+   Build an image carousel that allows the user to click "next" and "previous" buttons to cycle through a set of images.
+
+7. *Mouse Hover Effects*
+   Create a div with an image. When the user hovers over the image, change its size or apply a different style to it. When the mouse leaves, return it to its original state.
+
+8. *Validation Form*
+   Create a form with validation for required fields. When the user submits the form, validate the inputs and display error messages if necessary.
+
+9. *Dropdown Menu* ✓
+   Create a navigation menu with dropdown sub-menus. When a user hovers over a menu item, show the associated sub-menu.
+
+10. *Interactive Quiz*
+    Develop a simple quiz with multiple-choice questions. When the user selects an answer and clicks "Submit," display the score at the end.
+👻👽
+These exercises cover a range of concepts related to DOM manipulation and event handling. You can start with the basic ones and gradually move on to more complex projects as you become more comfortable with these concepts.

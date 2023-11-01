@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="output">
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="common.js"></script>
+    <script>
+        //create list/array
+        var states = [
+            {
+                name: "Andhra Pradesh",
+                income: 267459,
+                capital: "Amaravati",
+                population: 54033949,
+                imageUrl: "https://picsum.photos/id/1/200",
+            },
+            {
+                name: "Arunachal Pradesh",
+                income: 222069,
+                capital: "Itanagar",
+                population: 1484552,
+                imageUrl: "https://picsum.photos/id/2/200",
+            },
+            {
+                name: "Assam",
+                income: 225362,
+                capital: "Dispur",
+                population: 31205576,
+                imageUrl: "https://picsum.photos/id/3/200",
+            },
+            {
+                name: "Bihar",
+                income: 165897,
+                capital: "Patna",
+                population: 128511644,
+                imageUrl: "https://picsum.photos/id/4/200",
+            },
+            {
+                name: "Chhattisgarh",
+                income: 210718,
+                capital: "Raipur",
+                population: 28183066,
+                imageUrl: "https://picsum.photos/id/5/200",
+            },
+            {
+                name: "Dadra and Nagar Haveli and Daman and Diu",
+                income: 353311,
+                capital: "Silvassa",
+                population: 603962,
+                imageUrl: "https://picsum.photos/id/6/200",
+            },
+            {
+                name: "Delhi",
+                income: 372135,
+                capital: "New Delhi",
+                population: 16787941,
+                imageUrl: "https://picsum.photos/id/7/200",
+            },
+            {
+                name: "Goa",
+                income: 391749,
+                capital: "Panaji",
+                population: 1525458,
+                imageUrl: "https://picsum.photos/id/8/200",
+            },
+            {
+                name: "Gujarat",
+                income: 293316,
+                capital: "Gandhinagar",
+                population: 63035736,
+                imageUrl: "https://picsum.photos/id/9/200",
+            },
+            {
+                name: "Haryana",
+                income: 332324,
+                capital: "Chandigarh",
+                population: 25712776,
+                imageUrl: "https://picsum.photos/id/10/200",
+            },
+            {
+                name: "Himachal Pradesh",
+                income: 262842,
+                capital: "Shimla",
+                population: 7191707,
+                imageUrl: "https://picsum.photos/id/11/200",
+            },
+            {
+                name: "Jammu and Kashmir",
+                income: 255677,
+                capital: "Srinagar and Jammu",
+                population: 12541117,
+                imageUrl: "https://picsum.photos/id/12/200",
+            },
+            {
+                name: "Jharkhand",
+                income: 216157,
+                capital: "Ranchi",
+                population: 35022538,
+                imageUrl: "https://picsum.photos/id/13/200",
+            },
+            {
+                name: "Karnataka",
+                income: 335175,
+                capital: "Bengaluru",
+                population: 65442171,
+                imageUrl: "https://picsum.photos/id/14/200",
+            }
+        ];
+        //size of the list 
+        console.log(states.length);
+        function DisplayState(state) {
+            // let name = state.name;
+            // let capital = state.capital;
+            // let population = state.population;
+            // let photo = state.imageUrl;
+            // let income = state.income;
+            // or
+            // let {name:name,capital:capital,population:population,imageUrl:photo,income:income} = state;
+            // or
+            const { name, capital, population, imageUrl, income } = state;
+            $("output").innerHTML += `<div class='col-lg-3'><div class="card shadow">
+                        <div class="card-header text-bg-danger">
+                          <h2> ${name}</h2>
+                        </div>
+                        <div class="card-body">
+                        <img src=${imageUrl} class='img-fluid' />
+                        <p>
+                            Capital :- ${capital} <br/>
+                            Population :- ${population} <br/>
+                        </p>
+                       </div>
+                        <div class="card-footer text-muted">
+                            Income :- ${income}
+                        </div>
+                        </div></div>`;
+        }    
+        // for(let index=0;index<states.length;index++)
+        // {
+        //     DisplayState(states[index]);
+        // }
+        states.map((state) => DisplayState(state));
+    </script>
+</body>
+
+</html>

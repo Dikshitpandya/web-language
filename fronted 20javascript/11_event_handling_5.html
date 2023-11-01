@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <button id="zoomin"  type="button" class="btn btn-danger">Zoom in </button>
+                <button id="zoomout" type="button" class="btn btn-warning">Zoom out</button>
+                <button id="restore" type="button" class="btn btn-primary">restore</button>
+                <button id="shadow"  type="button" class="btn btn-info">apply shadow</button>
+                <button id="remove_shadow" type="button" class="btn btn-secondary">remove shadow</button>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <img id="myimage" src="https://picsum.photos/300" height="300" width="300" />
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="common.js"></script>
+    <script>
+
+        var img = $("myimage");
+        var height = parseInt(img.getAttribute("height"));
+        var width =  parseInt(img.getAttribute("width"));
+        let ChangeImageSize = (ButtonId) => {
+            console.log(ButtonId + ' button clicked....');
+           
+            console.log(height,width);
+            if(ButtonId == "zoomin")
+            {
+                height = parseInt(height * 1.10);
+                width = parseInt(width * 1.10);
+                if(height>500)
+                {
+                    document.getElementById(ButtonId).onclick = null;
+                }
+            }
+            else if(ButtonId == "zoomout")
+            {
+                height = parseInt(height * 0.90);
+                width = parseInt(width * 0.90);
+                if(height<100)
+                {
+                    document.getElementById(ButtonId).onclick = null;
+                }
+            }
+            else if(ButtonId == "restore")
+            {
+                height = 300;
+                width = 300;
+            }
+            else if(ButtonId == "shadow")
+            {
+                img.className = "shadow";
+            }
+            else if(ButtonId == "remove_shadow")
+            {
+                img.className = "";
+            }
+            console.log(height,width);
+            img.setAttribute('height',height);
+            img.setAttribute('width',width);
+        }
+       
+        var button_list = document.getElementsByClassName("btn");
+        Array.from(button_list).forEach((button) => {
+             button.onclick =  () => ChangeImageSize(button.id);
+        });
+        
+        //or 
+        // Array.from(document.getElementsByClassName("btn")).forEach((button) => button.onclick =  () => ChangeImageSize(button.id));
+    </script>
+</body>
+</html>

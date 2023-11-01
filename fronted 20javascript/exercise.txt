@@ -1,0 +1,19 @@
+create web page using bootstrap and jaavascript that will display multiplication table dynamically of given range. 
+start = 1 
+stop  = 10
+display card for each multiplier. display 4 such card for large screen, 3 card for medium screen and 2 card for small screen and 1 card for mobile
+
+
+develop EMI Calculator as per example 12_event_handling.html (1st, 2nd, 3rd method)
+develop BMI Calculator as per example 12_event_handling.html (1st, 2nd, 3rd method)
+
+develop web page that display all IPL team name and it's logo using 2nd object creation technique. each team should be display in card. display 4 card per line 
+
+develope web page as per screen shot shared in Whatsup. develop example according to 17_object4.html 
+
+create class KG which return Kilogram of grams given in constructor and it has method getKG which return KG. extends this class in Ton. which has method getTon that returns ton of grams given in constructor.
+
+create class meter which return meter of inches given in constructor and it has method getMeter which return meter. extends this class in KM. which has method getKM that returns km of inches given in constructor. extends KM class in Mile class which has method getMile that return miles of inches given in constructor
+
+create jaavascript code to print web page directly without display print priview option.
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Detect User's location using javascript & HTML 5</h1>
+    <hr/>
+    <table align="center" width="100%" border="1">
+        <tr>
+            <td>
+                <input type="button" value="Get My Location" id="location" onclick="GetMyLocation();" />
+            </td>
+        </tr>
+        <tr>
+            <td id="output"></td>
+        </tr>
+        
+    </table>  
+    <script src="common.js"></script>
+    <script>
+        //arrow function 
+        GetMyLocation = () => {
+            //alert("hi");
+            navigator.geolocation.getCurrentPosition(showMyLocation);
+        }
+        function showMyLocation(location)
+        {
+            console.log(location.coords.latitude);
+            console.log(location.coords.longitude);
+            console.log(location.coords.accuracy);
+            var output = $("output");
+            var message = "latitude " + location.coords.latitude + " longitude " + location.coords.longitude + " accuracy " + location.coords.accuracy
+            output.innerHTML = message;
+        }
+    </script>
+</body>
+</html>

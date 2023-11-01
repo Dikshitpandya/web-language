@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content 
+        {
+            font-size: xx-large;
+            padding:10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Working with InnerHTML property</h1>
+    <hr/>
+    <input type="text" name="fullname" id="fullname" />
+    <button type="button" onclick="SetContent();">Click Me to change paragraph</button>
+    <button type="button" onclick="GetContent();">Click me to get Content of paragraph</button>
+    <button type="button" onclick="ClearInput();">Clear input</button>
+    <p id="content">
+
+    </p>
+
+    <script>
+        //user defined function (define/definition)
+        function SetContent()
+        {
+            // alert("hi");
+            var fullname = document.getElementById('fullname').value;
+            document.getElementById('content').innerHTML = fullname;
+        }
+        function GetContent()
+        {
+            //local variable (only accessible inside function where it is declared)
+            let temp =  document.getElementById('content').innerHTML;
+            alert(temp);
+        }
+        function ClearInput()
+        {
+            document.getElementById('fullname').value = "";
+        }
+    </script>
+</body>
+</html>

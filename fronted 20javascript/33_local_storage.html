@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">local storage example </h1>
+    <form  method="post" onsubmit="return GetSetLocalStorage();">
+        <table border="2" align="center" cellpadding="10">
+            <tr>
+                <td>
+                    <label for="key">Key:</label>
+                </td>
+                <td>
+                    <input type="text" id="key" name="key" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="value">Value:</label>
+                </td>
+                <td>
+                    <input type="text" id="value" name="value" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Operation:</label>
+                </td>
+                <td>
+                    <input type="radio" id="write" name="operation" value="write" required>
+                    <label for="write">Write</label>
+                    <input type="radio" id="read" name="operation" value="read" required>
+                    <label for="read">Read</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" id="output"> </td>
+            </tr>
+        </table>
+    </form>
+    <script src="common.js"></script>
+    <script>
+        //create function 
+        GetSetLocalStorage = () => {
+            //alert("hi");
+            let key = $("key").value;
+            let value = $("value").value;
+            let choice = document.querySelector("input[name='operation']:checked").value;
+            console.log(key,value,choice);
+            if(choice == "write")
+            {
+                //write value into local storage
+                localStorage.setItem(key,value);
+                alert("key value pair saved in local storage");
+                $("key").value = "";
+                $("value").value = "";
+            }
+            else 
+            {
+                let temp = localStorage.getItem(key);
+                console.log(temp);
+                if(temp == null)
+                    alert("no such key in local storage");
+                else 
+                    $("value").value = temp;
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

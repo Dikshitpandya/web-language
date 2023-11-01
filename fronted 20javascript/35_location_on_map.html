@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+</head>
+<body>
+    <h1>Detect User's location using javascript & HTML 5</h1>
+    <hr/>
+    <table align="center" width="100%" border="1">
+        <tr>
+            <td>
+                <input type="button" value="Get My Location" id="location" onclick="GetMyLocation();" />
+            </td>
+        </tr>
+        <tr>
+            <td id="output"></td>
+        </tr>
+        <tr>
+            <td>
+                <div id="mymap" style = "width:100%;height:400px"></div>
+            </td>
+        </tr>
+    </table>  
+    <script src="common.js"></script>
+    <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <script>
+        //arrow function 
+        GetMyLocation = () => {
+            //alert("hi");
+            navigator.geolocation.getCurrentPosition(showMyLocation);
+        }
+        function showMyLocation(location)
+        {
+            console.log(location.coords.latitude);
+            console.log(location.coords.longitude);
+            console.log(location.coords.accuracy);
+            var output = $("output");
+            var message = "latitude " + location.coords.latitude + " longitude " + location.coords.longitude + " accuracy " + location.coords.accuracy
+            output.innerHTML = message;
+
+            //display user's location on map 
+             var mapOptions = {
+                center: [location.coords.latitude,location.coords.longitude],
+                zoom: 15
+            }
+            // Creating a map object
+            var map = new L.map('mymap', mapOptions);
+            // Creating a Layer object
+            var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+            // Adding layer to the map
+            map.addLayer(layer);
+            let iconOptions = {
+                title:"the easylearn academy",
+                draggable:false,
+            }
+            let marker = new L.Marker([location.coords.latitude,location.coords.longitude],iconOptions);
+            marker.addTo(map);
+        }
+    </script>
+</body>
+</html>
