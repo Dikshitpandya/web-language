@@ -1,0 +1,28 @@
+/* external stylesheets  */
+* 
+{
+    margin:0px;
+    padding:0px;
+}
+html 
+{
+    height:100vh;
+}
+body 
+{
+    min-height:100%;
+    background-image: url('images/earth.png');
+    border:1px solid black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    
+}
+.box 
+{
+    border:1px solid blue;
+    height:200px;
+    width:200px;
+    display: inline-block;
+    overflow: scroll;
+}

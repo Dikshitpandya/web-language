@@ -1,0 +1,35 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+body 
+{
+    background-color: beige;
+}
+.box 
+{
+    border:3px double black;
+    height:150px;
+    width:150px;
+    margin-bottom: 10px;
+    position: relative;
+}
+#red 
+{
+    background-color: red;
+    top:50px;
+    left:50px;
+}
+#green 
+{
+    background-color: green;
+    top:0px;
+    left:50px;
+}
+#blue 
+{
+    background-color: blue;
+    top:20px;
+    left:50px;
+}

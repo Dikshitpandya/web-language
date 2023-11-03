@@ -1,0 +1,25 @@
+*
+{
+    margin:0px;
+    padding:0px;
+    letter-spacing: 1px;
+}
+body 
+{
+    background-color: aliceblue;
+}
+article 
+{
+    width:80%;
+    background-color: cyan;
+    margin: auto;
+    padding:10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    border:1px solid blue;
+}
+article>div 
+{
+    border:1px solid blue;
+    padding:10px;
+}

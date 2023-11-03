@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+</head>
+
+<body>
+    <h1 align="center">
+        Example of Register form
+    </h1>
+    <hr />
+    <form action="success.html" method="post" enctype="multipart/form-data">
+        <table border="2" align="center" cellpadding="2" width="50%">
+            <tr>
+                <td>
+                    Enter Your name
+                </td>
+                <td>
+                    <input type="text" name="user_name" id="user_name" required placeholder="Enter your name " />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter your mobile number 
+                </td>
+                <td>
+                    <input type="number" name="mobile_number" placeholder="Enter mobile number here " required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter Date of birth
+                </td>
+                <td>
+                    <input type="date" name="dob" required />
+                </td>
+            </tr>
+            <tr>
+                <td>Select your city</td>
+                <td>
+                    <select name="city" id="city" required>
+                        <option value="">Select city</option>
+                        <option value="0">Surat</option>
+                        <option value="1">Ahmedabad</option>
+                        <option value="2">Rajkot</option>
+                        <option value="3">Bhavnavgar</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Select Your gender
+                </td>
+                <td>
+                    <label for="male">
+                        <input id="male" type="radio" name="gender" value="1" required />Male
+                    </label>
+                    <label for="female">
+                        <input id="female" type="radio" name="gender" value="0" required />Female
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Select your hobbies
+                </td>
+                <td>
+                    <label for="">
+                        <input type="checkbox" value="1" name="coding">Coding
+                    </label>
+                    <label for="">
+                        <input type="checkbox" value="2" name="cricket">Cricket
+                    </label>
+                    <label for="">
+                        <input type="checkbox" value="4" name="hockey">Hockey
+                    </label>
+                    <label for="">
+                        <input type="checkbox" value="8" name="reading">Reading
+                    </label>
+                </td> 
+            </tr>
+            <tr>
+                <td>
+                    Enter your address
+                </td>
+                <td>
+                    <textarea name="address" id="address" maxlength="1024"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Select Photo
+                </td>
+                <td>
+                    <input type="file" name="image" accept="image/*">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Clear All">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
