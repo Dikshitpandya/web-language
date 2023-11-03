@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Datalist</h1>
+    <hr/>
+    <form action="">
+        <table border="2" align="center" cellpadding="10" cellspacing="10" width="50%">
+            <tr>
+                <td>From</td>
+                <td>
+                    <input type="text" name="from" list="city" />
+                </td>
+                <td>To</td>
+                <td><input type="text" name="to" list="city" /></td>
+                <td>
+                    <input type="submit" value="Search" />
+                </td>
+            </tr>
+        </table>
+        <datalist id="city">
+            <option value="ahmedabad" />
+            <option value="ahmednagar" />
+            <option value="anand" />
+            <option value="amerli" />
+            <option value="bhavnagar" />
+            <option value="baroda" />
+            <option value="babra" />
+        </datalist>
+    </form>
+</body>
+</html>

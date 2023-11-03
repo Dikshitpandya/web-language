@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            margin: 50px auto;
+            width: 50%;
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            background: #888;
+            padding: 10px 30px;
+            font-size: 20px;
+            color: #ddd;
+            cursor: pointer;
+            margin: 10px auto;
+        }
+
+        .btn:hover {
+            background: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 6. *Image Carousel*👻👽 -->
+    <!-- Build an image carousel that allows the user to click "next" and "previous" buttons to cycle through a set of images. -->
+    <div class="slider">
+        <div class="img-box">
+            <img src="img/a.jpg" alt="" class="slider-img">
+        </div>
+
+        <button class="btn" onclick="prev()">previous</button>
+        <button class="btn" onclick="next()">next</button>
+    </div>
+
+    <script>
+        var slider_img = document.querySelector('slider-img');
+        var image = ['a.jpg', 'b.jpg', 'c.jpg', 'd.jpg', 'e.jpg'];
+        var i = 0;
+
+        function prev() {
+            if (i <= 0) i = image.length;
+            i--;
+            return setimg();
+        }
+
+        function next() {
+            if (i >= image.length - 1) i = -1;
+            i++;
+            return setimg();
+
+        }
+
+        function setimg() {
+            return slider_img.setAttribute('src', 'img/' + image[i]);
+        }
+    </script>
+</body>
+
+</html>
