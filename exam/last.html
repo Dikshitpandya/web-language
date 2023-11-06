@@ -1,6 +1,6 @@
 <!-- // Create Basic Mathematical Calculator that accept two numbers from user and also has 4 radio buttonfor four basicmathematical operations and submit button. Calculate result according to radio buttonselected by user when user click onsubmit button. -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -48,6 +48,74 @@
         var answer = temp * temp2;
         alert("answer");
         console.log(answer = document.getElementById("answer").value);
+    </script>
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Calculator</title>
+</head>
+
+<body>
+    <h1>Basic Mathematical Calculator</h1>
+
+    <form id="calculatorForm">
+        <label for="num1">Enter Number 1:</label>
+        <input type="number" id="num1" required><br><br>
+
+        <label for="num2">Enter Number 2:</label>
+        <input type="number" id="num2" required><br><br>
+
+        <input type="radio" name="operation" value="add"> Addition
+        <input type="radio" name="operation" value="subtract"> Subtraction
+        <input type="radio" name="operation" value="multiply"> Multiplication
+        <input type="radio" name="operation" value="divide"> Division<br><br>
+
+        <input type="submit" value="Calculate">
+    </form>
+
+    <div id="result">
+        <p>Result: </p>
+    </div>
+
+    <script>
+        document.getElementById('calculatorForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const operation = document.querySelector('input[name="operation"]:checked').value;
+            let result;
+
+            switch (operation) {
+                case 'add':
+                    result = num1 + num2;
+                    break;
+                case 'subtract':
+                    result = num1 - num2;
+                    break;
+                case 'multiply':
+                    result = num1 * num2;
+                    break;
+                case 'divide':
+                    if (num2 === 0) {
+                        result = 'Cannot divide by zero';
+                    } else {
+                        result = num1 / num2;
+                    }
+                    break;
+                default:
+                    result = 'Invalid operation';
+            }
+
+            document.getElementById('result').innerHTML = `<p>Result: ${result}</p>`;
+        });
     </script>
 </body>
 

@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>How to display another page using javaScript? (without link/submit)</h1>
-    <table border="1" width="80%" >
+    <table border="1" width="90%">
         <tr>
-            <td><input type="button" value="Google" id="google"  
-                onclick="DisplaySite(this.id);" /></td>
-            <td><input type="button" value="Facebook" id="facebook"  
-                onclick="DisplaySite(this.id);" /></td>
-            <td><input type="button" value="Instagram" id="instagram"  
-                onclick="DisplaySite(this.id);" /></td>
+            <td>
+                <input type="button" value="Google" id="google" onclick="DisplaySite(this.id);" />
+            </td>
+            <td>
+                <input type="button" value="Facebook" id="facebook" onclick="DisplaySite(this.id);" />
+            </td>
+            <td>
+                <input type="button" value="Instagram" id="instagram" onclick="DisplaySite(this.id);" />
+            </td>
             <td>
                 <input type="button" value="Print" onclick="window.print();">
             </td>
@@ -32,13 +37,14 @@
         DisplaySite = (ButtonId) => {
             //alert("button clicked");
             alert(ButtonId);
-            if(ButtonId == "google")
+            if (ButtonId == "google")
                 window.location = "https://www.google.com";
-            else if(ButtonId == "facebook")
+            else if (ButtonId == "facebook")
                 window.location = "https://www.facebook.com";
             else
-                    window.location = "https://www.instagram.com";
+                window.location = "https://www.instagram.com";
         }
     </script>
 </body>
+
 </html>
