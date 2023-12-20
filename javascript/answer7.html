@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- 7. *Mouse Hover Effects*👻👽 -->
-   <!-- Create a div with an image. When the user hovers over the image, change its size or apply a different style to it. When the mouse leaves, return it to its original state. -->
-   
+    <!-- Create a div with an image. When the user hovers over the image, change its size or apply a different style to it. When the mouse leaves, return it to its original state. -->
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Image Hover Effect</title>
+    <style>
+        #imageContainer {
+            position: relative;
+            display: inline-block;
+        }
+
+        #hoveredImage {
+            width: 200px;
+            height: 150px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #hoveredImage:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="imageContainer">
+        <img id="hoveredImage" src="img/b.jpg" alt="Hover Me">
+    </div>
+
+    <script>
+        const image = document.getElementById("hoveredImage");
+
+        image.addEventListener("mouseout", () => {
+            image.style.transform = "scale(1)";
+        });
+    </script>
 </body>
+</html>
+
+</body>
+
 </html>

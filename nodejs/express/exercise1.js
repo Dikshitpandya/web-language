@@ -3,6 +3,8 @@
 
 var express = require('express')
 var app = express();
+var fs = require('fs');
+
 //define middleware
 
 app.use(function (request, response, next) {
@@ -24,6 +26,20 @@ app.use(function (request, response, next) {
     else
         response.send("we accept request only between 10 to 5 ");
 
+});
+
+app.use(function (request, response, next) {
+    console.log("i am the thired middleware");
+    var FileName = 'routehistory.txt'
+    var FileContent = (now) + (today);
+
+    fs.writeFile(FileName, FileContent, function (error) {
+        if (error != null)
+            response.write('File could not be created');
+        else
+            response.write('File created');
+        response.end();
+    });
 });
 
 app.get("/home", function (request, response) {

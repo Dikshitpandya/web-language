@@ -1,7 +1,13 @@
 
 var express = require('express');
 var app = express();
+
+// પહેલા સર્વર on કરવા માટે ctrl + ` પ્રેસ કરો પછી cd nodejs  + press enter પછી cd express + press enter   પછી node lessen1.js 
+
 //define routes 
+
+    // રન કરવા માટે http://localhost:5000/ વેબ adress માં લખવું
+
 app.get("/", function (request, response) {
     response.send(`<h1>State of india</h1><ul><li>Andhra Pradesh</li>
     <li>Arunachal Pradesh</li>
@@ -38,10 +44,15 @@ app.get("/", function (request, response) {
     <li>Lakshadweep</li>
     <li>Dadra and Nagar Haveli and Daman and Diu</li></ul>`);
 
+     // રન કરવા માટે http://localhost:5000/gujarat વેબ adress માં લખવું
+
     //define route for gujarat
     app.get("/gujarat", function (reuqest, response) {
         response.send(`<h1>Gujarat</h1><p>ગુજરાત રાજ્ય, ભારતનું એક પ્રમુખ રાજ્ય છે જે પશ્ચિમ ભારતની તટનો પાસે સ્થિત છે. આ રાજ્ય મહાત્મા ગાંધીનું જન્મસ્થળ છે અને આપણે ગુજરાતી ભાષાનું વારસો પામીએ છીએ. ગુજરાત એક પ્રાચીન સ્થળ છે, જે સંસ્કૃતી, વ્યાપાર, અને કલાની સાકષર કરે છે. આ રાજ્યમાં સૂરત, અહમદાબાદ, રાજકોટ, ભાવનગર, અને વડોદરા જેવા મહત્વના શહેરો છે. ગુજરાતની વસ્તી મજબૂત છે અને આપણે વેપાર, ઉદ્યોગ, ખોરાક અને સાંસ્કૃતિક સ્થળોને આનંદ કરી શકીએ.</p>`)
     });
+
+    // રન કરવા માટે http://localhost:5000/punjab વેબ adress માં લખવું
+
 
     //define route for rajasthan
     app.get("/punjab", function (reuqest, response) {

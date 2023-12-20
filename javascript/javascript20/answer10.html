@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Quiz</title>
+    <style>
+        .quiz-container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .question {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .option {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quiz-container">
+        <h1>Simple Quiz</h1>
+        <div id="quiz">
+            <div class="question" id="question">Question 1: What is the capital of France?</div>
+            <div class="options" id="options">
+                <label class="option">
+                    <input type="radio" name="answer" value="a"> a) London
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer" value="b"> b) Berlin
+                </label>
+                <label class="option">
+                    <input type="radio" name="answer" value="c"> c) Paris
+                </label>
+            </div>
+            <button id="submit">Submit</button>
+        </div>
+        <div id="results" style="display: none;">
+            <h2>Results</h2>
+            <p id="score"></p>
+        </div>
+    </div>
+
+    <script>
+        const quiz = [
+            {
+                question: "What is the capital of France?",
+                answer: "c"
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                answer: "b"
+            },
+            {
+                question: "What is the largest mammal in the world?",
+                answer: "a"
+            }
+        ];
+
+        const questionElement = document.getElementById("question");
+        const optionsElement = document.getElementById("options");
+        const submitButton = document.getElementById("submit");
+        const resultsContainer = document.getElementById("results");
+        const scoreElement = document.getElementById("score");
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const currentQuiz = quiz[currentQuestion];
+            questionElement.textContent = `Question ${currentQuestion + 1}: ${currentQuiz.question}`;
+            optionsElement.innerHTML = "";
+
+            for (const option of ["a", "b", "c"]) {
+                const label = document.createElement("label");
+                label.classList.add("option");
+
+                const input = document.createElement("input");
+                input.type = "radio";
+                input.name = "answer";
+                input.value = option;
+
+                label.appendChild(input);
+                label.appendChild(document.createTextNode(` ${option}) ${currentQuiz[option]}`));
+
+                optionsElement.appendChild(label);
+            }
+        }
+
+        function showResults() {
+            questionElement.style.display = "none";
+            optionsElement.style.display = "none";
+            submitButton.style.display = "none";
+            resultsContainer.style.display = "block";
+            scoreElement.textContent = `You got ${score} out of ${quiz.length} questions correct.`;
+        }
+
+        loadQuestion();
+
+        submitButton.addEventListener("click", () => {
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+            if (!selectedAnswer) return;
+
+            if (selectedAnswer.value === quiz[currentQuestion].answer) {
+                score++;
+            }
+
+            currentQuestion++;
+            if (currentQuestion < quiz.length) {
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        });
+    </script>
+</body>
+
+</html>

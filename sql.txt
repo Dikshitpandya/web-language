@@ -1,0 +1,297 @@
+How to create table 
+
+SQL SYNTAX
+create table <tablename> (
+<fieldname> datatype(size) [constraints],
+<fieldname> datatype(size) [constraints],
+<fieldname> datatype(size) [constraints]
+)
+
+Create table student which has following fields
+id,fullname,dob,gender,email,mobile,photo,weight,address
+
+create table student (
+	id int(10) PRIMARY KEY AUTO_INCREMENT,
+	fullname varchar(255) not null, 
+	dob date, 
+	gender int(1) not null,
+	email varchar(128) not null unique, 
+	mobile varchar(16) not null unique, 
+	photo varchar(255), 
+	weight float(5,2),
+	address varchar(512)
+)
+
+HOW TO remove table with all records
+SYNTAX 
+drop table <tablename>
+example
+drop table student
+
+How to insert Records/Rows into table 
+syntax
+1st methods
+insert into <tablename> values (<value-1>,<value-2>,<value->);
+insert new row into course table 
+
+insert into course values (NULL,"HTML",2000,"Hypertext markup language","html.png",1);
+
+2nd method 
+insert into <tablename>(<field-1>,<field-2>,<field-3>) values (<value-1>,<value-2>,<value->);
+
+insert into course (id,name,fees,detail,image,iscertified) values (NULL,'CSS',3000,'cascading stylesheet','css.png',1);
+
+insert into course(name,fees,iscertified) values ('Javascript',4000,1);
+insert into course(name,iscertified) values ('Python & django',1);
+
+how to empty table (remove all rows and reset primary key)
+syntax 
+truncate table <tablename>
+example
+truncate table course
+------------------------------------
+how to delete all rows from table withtout reset primary key 
+syntax 
+delete from <tablename>
+example
+delete from course 
+
+how to delete specific row  from table / delete row as per condition 
+syntax 
+delete from <tablename> where condition 
+example 
+delete course whose id is 4
+delete from course where id=4
+
+example 
+delete course whose fee is above 10000
+delete from course where fee>10000
+
+example 
+delete course whose course name is CSS
+delete from course where name='css'
+
+how to update(change) existing row's fields' value 
+syntax 
+update <tablename> set fieldname=value,fieldname2=value2,fieldname3=value [where condition]
+example
+1) update office table change city to bhavnagar, state to gujarat and postalcode to 364001 whose officecode is 1 
+update offices set city='bhavnagar',state='gujarat',postalcode='364001' where officecode=1
+
+2) update customers creditlimit set it to 2050000 for those customer who are from usa 
+update customers set creditlimit=2050000 where country='usa'
+
+3) update customers creditlimit increase creditlimit by 10 rs 
+update customers set creditlimit=creditlimit+10
+
+how to fetch data from tables
+syntax
+select <*|fieldlist> from <tablename> [where condition] [group by fieldname] [having function] [order by fieldname] [limit fieldname]
+
+examples
+1) fetch all fields all rows from customers
+select * from customers 
+
+2) fetch only customerNumber and customerName and his country,state and city 
+select customerNumber,customerName,country,state,country from customers.
+
+3) fetch only give no of records from table 
+fetch 1st 10 records from tables 
+select * from customers limit 0,10
+
+fetch next 10 records from customers
+select * from customers limit 10,10
+
+fetch next 10 records customerNumber and their name 
+select customerNumber,customerName from customers limit 20,
+
+fetch first 10 customerName and country and state and city in name wise ascending order 
+select customerName,country,state,city from customers order by customerName limit 0,10
+
+fetch all customers' name,country,state and city and display it first country wise, then state wise and then city wise 
+select customerName,country,state,city from customers order by country,state,city limit 0,200
+
+fetch all customers' name,country,state and city and display it first country wise descending order, then state wise descending order and then city wise 
+select customerName,country,state,city from customers order by country desc, state desc ,city limit 0,200
+
+display first 10 customer name and his credit limit who has highest creditlimit 
+select customerName,creditlimit from customers order by creditlimit desc limit 0,10
+
+display most recent 5 payment details 
+select * from payments order by paymentDate desc limit 0,5
+
+display top 10 largest payments 
+select * from payments order by amount desc limit 0,10
+
+how to filter records as per requirement 
+fetch only those payment detail whose amount is above 10000
+select * from payments where amount>10000
+
+fetch payment less then 50000 and display it in date wise descending order 
+select * from payments where amount<50000 order by paymentDate desc
+
+fetch payment detail which is between range of 100000 and 200000
+select * from payments where amount>=100000 and amount<=200000
+or 
+select * from payments where amount between 100000 and 200000
+
+
+fetch largest payment made in year 2023
+select * from payments where paymentDate>='2023-01-01' and paymentDate<='2023-12-31' order by amount desc limit 0,1
+
+or 
+select * from payments where LEFT(paymentDate,4)='2023'  order by amount desc limit 0,1
+
+fetch march-2023 payment detail and display date wise 
+select * from payments where paymentDate>='2023-03-01' and paymentDate<='2023-03-31' order by paymentDate	
+
+display payment detail with indian date format 
+SELECT customerNumber, DATE_FORMAT(paymentDate, '%d-%m-%Y') as paymentDate, checknumber, amount FROM payments LIMIT 0, 300 
+
+fetch those customername and country who are from USA, Austalia, France, India 
+select customerName,country from customers where country='USA' or country='france' or country='Australia' or country='india'
+
+or 
+select customerName,country from customers where country in('USA','france','Australia','india')
+
+fetch those customername and country who are not from USA, Austalia, France, India 
+select customerName,country from customers where country!='USA' and country!='france' and country!='Australia' and country!='india'
+
+or 
+select customerName,country from customers where country not  in('USA','france','Australia','india')
+
+aggregate functions
+---------------------------------------
+what is aggregate functions?
+function which works upon numeric field , do some operations and return only single value is called aggregate functions
+
+SUM(field)
+return sum of given field's value 
+findout total payment amount received so far 
+select sum(amount) as total from payments
+
+
+AVG(field)
+return average of given field's value 
+findout average payment amount 
+select avg(amount) as average from payments 
+
+min(field)
+return minimum value of given field's value 
+select min(amount) as minimum from payments 
+
+max(field)
+return maximum value of given field's value 
+select max(amount) as maximum from payments 
+
+count(*)
+return count of records 
+select count(*) as total from payments
+
+we can also use where clause with aggregate function
+example
+findout total payment amount made by customerNumber 114
+select sum(amount) from payments where customerNumber=114
+
+findout total payment amount received in march-2023
+select sum(amount) from payments where left(paymentDate,7)='2023-03'
+
+count no of payments made in year 2003
+select count(*) from payments where left(paymentDate,4) = '2003'
+
+count no of payments made in year 2003,2004,2005
+select count(*) from payments where left(paymentDate,4) = '2003' or left(paymentDate,4) = '2004' or left(paymentDate,4) = '2005'
+above query will give total count for all 3 years as single value. not for individual year. which is not corrent, to solve this issue we have use group by 
+
+select count(*) from payments group by left(paymentDate,4)
+
+fetch customerwise total payment
+select customerNumber,sum(amounts) as total from payments group by customerNumber
+
+count no of payments made by each customers 
+select customerNumber,count(*) as no_of_payments from payments group by customerNumber
+
+display count of no of customers company has for each and every country
+select 
+select country,count(*) as 'count_of_customers' from customers group by country
+
+display count of orders in descending order  made by each customers 
+select customerNumber,count(*) from orders group by customerNumber order by count(*) desc
+
+fetch customerwise total payment of those customer whose total payment is < 100000
+select sum(amount), customerNumber from payments group by customerNumber having sum(amount)<100000
+
+display count of no of customers company has for those from which company has <3 customers 
+select count(*),country from customers group by country having count(*)<3
+
+display count of orders in descending order  made by each customers of those who has given more then 10 orders 
+select count(*),customerNumber from orders group by customerNumber having count(*)>10
+
+what is join query 
+query which fetch data from more then one table is called join query. in join query we use more then one table name after from clause and it also has at least one condition on table's common field 
+syntax
+select *|<field list> from <tablename1>,<tablename2>,[<tablename>] where tablename1.field = tablename2.field 
+
+example 
+display customerName,country,state and his ordernumber, status customerName in ascending order 
+
+
+select customerName,country,state from customers
+select ordernumber,status from orders
+
+let join above 2 query 
+select customerName,country,state,ordernumber,status from customers, orders where customers.customerNumber = orders.customerNumber order by customerName
+
+display customername and his payment details 
+select customerName from customers
+select * from payments
+let join above 2 query 
+select customerName,p.* from customers c,payments p where c.customerNumber = p.customerNumber
+
+display customername,country and his payment details of those customers who are from usa 
+select customerName,country,p.* from customers c,payments p where c.customerNumber = p.customerNumber
+and c.country = 'usa'
+
+display product details and its product line details 
+select p.*,pl.* from products p, productlines pl where p.productlines = pl.productlines
+
+display customerName,customerNumber, salesman name, and order details. display detail in customerName ascending order 
+select customerName,customerNumber from customers
+select firstname,lastname from employees 
+select * from orders 
+
+now merge them 
+select customerName,customerNumber,firstname,lastname,o.* from customers c, employees e, orders o where c.customerNumber = o.customerNumber and c.salesRepEmployeeNumber = e.employeeNumber order by customerName
+
+types of join
+	equi join 
+		matching rows from both table 
+	left outer join 
+		it fetch all rows from left table but only matching row from right table 
+	right outer join 
+		it fetch all rows from right table but only matching row from left table 
+	full outer join 
+		all rows from both table 
+findout customerNumber and customerName who have never given any order 
+select customerName,customerNumber from customers
+select ordernumber from orders
+select customerName,c.customerNumber,ordernumber from customers c left outer join orders o on c.customerNumber = o.customerNumber where o.ordernumber IS NULL order by o.customerNumber
+
+findout customerNumber and customerName,phone who have not  given any order in year 2003
+
+select customerNumber from customers c 
+select DISTINCT customerNumber from orders where left(orderdate,4) = '2003' order by customerNumber
+
+sub query 
+when we execute query inside another query, it is called sub query. in this concept main query is called outer query and query inside main query is called inner query. in sub query first inner query is executed. and it's result is passed into outer query which mostly used in condition. 
+
+merge 
+select customerNumber,customerName,phone from customers c where customerNumber not in(select DISTINCT customerNumber from orders where left(orderdate,4) = '2003')
+
+findout customerNumber,customerName,phone of those customers who has never given any payments 
+select customerNumber,customerName,phone from customers c 
+select DISTINCT customerNumber from payments
+
+merge
+
+

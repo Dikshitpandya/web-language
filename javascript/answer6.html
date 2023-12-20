@@ -11,6 +11,10 @@
             width: 50%;
         }
 
+        .img-box img {
+            width: 100px;
+        }
+
         .btn {
             border: none;
             outline: none;
@@ -31,7 +35,7 @@
 <body>
     <!-- 6. *Image Carousel*👻👽 -->
     <!-- Build an image carousel that allows the user to click "next" and "previous" buttons to cycle through a set of images. -->
-    <div class="slider">
+    <!-- <div class="slider">
         <div class="img-box">
             <img src="img/a.jpg" alt="" class="slider-img">
         </div>
@@ -40,28 +44,93 @@
         <button class="btn" onclick="next()">next</button>
     </div>
 
-    <script>
-        var slider_img = document.querySelector('slider-img');
-        var image = ['a.jpg', 'b.jpg', 'c.jpg', 'd.jpg', 'e.jpg'];
-        var i = 0;
-
-        function prev() {
-            if (i <= 0) i = image.length;
-            i--;
-            return setimg();
-        }
-
-        function next() {
-            if (i >= image.length - 1) i = -1;
-            i++;
-            return setimg();
-
-        }
-
-        function setimg() {
-            return slider_img.setAttribute('src', 'img/' + image[i]);
-        }
-    </script>
+<script src="javascript/answer6.js"></script>
 </body>
 
-</html>
+</html> -->
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="carousel.css">
+        <style>
+            .carousel-container {
+                display: flex;
+                overflow: hidden;
+                width: 300px;
+                /* Adjust to your desired carousel width */
+            }
+
+            .carousel-slide {
+                flex: 0 0 100%;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .carousel-slide img {
+                width: 100%;
+                height: auto;
+            }
+
+            .carousel-button {
+                margin: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="img/a.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/b.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/d.jpg" alt="Image 3">
+            </div>
+        </div>
+        <button id="prevBtn" class="carousel-button" onclick="changeSlide(-1)">Previous</button>
+        <button id="nextBtn" class="carousel-button" onclick="changeSlide(1)">Next</button>
+        <script src="carousel.js"></script>
+
+
+        <script>
+            const slides = document.querySelectorAll(".carousel-slide");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+            let currentSlide = 0;
+
+            function showSlide(n) {
+                if (n < 0) {
+                    currentSlide = slides.length - 1;
+                } else if (n >= slides.length) {
+                    currentSlide = 0;
+                } else {
+                    currentSlide = n;
+                }
+
+                slides.forEach((slide, index) => {
+                    slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
+                });
+            }
+
+            function changeSlide(n) {
+                showSlide(currentSlide + n);
+            }
+
+            prevBtn.addEventListener("click", () => {
+                changeSlide(-1);
+            });
+
+            nextBtn.addEventListener("click", () => {
+                changeSlide(1);
+            });
+
+            showSlide(currentSlide);
+
+        </script>
+    </body>
+
+    </html>
