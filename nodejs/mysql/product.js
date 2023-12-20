@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 //input : none 
 
 // test
+//  check
 
 app.get("/product", function (request, response) {
     let sql = "select id,title,price,photo from product order by id desc"
