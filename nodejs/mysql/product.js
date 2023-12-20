@@ -9,6 +9,8 @@ app.use(express.urlencoded({ extended: true }));
 //method = get 
 //input : none 
 
+// test
+
 app.get("/product", function (request, response) {
     let sql = "select id,title,price,photo from product order by id desc"
     mysql.con.query(sql, function (error, result) {
