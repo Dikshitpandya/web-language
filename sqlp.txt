@@ -81,11 +81,11 @@ ans == update offices set postalcode='60601' where officeCode='4'
 
 18) Update the order detail with orderNumber 202 and productCode 'P102' and change the quantityOrdered to 15.
 
-ans ==
+ans == 
 
 19) Update the order detail with orderNumber 203 and productCode 'P103' and change the priceEach to 39.99.
 
-
+ans == update orderdetails set priceEach=39.99 where ordernumber=203 and productCode='P103'
 
 20) Update the order detail with orderNumber 204 and productCode 'P104' and change the orderLineNumber to 2.
 
@@ -114,7 +114,6 @@ ans ==
 
 26) Update the payment with customerNumber 107 and checkNumber 'CH789012' and change the customerNumber to
 108.
-
 
 
 27) Update the product line with productLine 'Toys' and change its textDescription to 'Products related to toys'.

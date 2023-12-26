@@ -1,0 +1,13 @@
+1) create resume using html tags like table and heading etc.
+
+2) create register form that accept email, password, confirm password and mobile no 
+
+3) create change password form that accept current password, new password and confirm new passwoord 
+
+4) create forgot password page.
+
+5) create page to search for bus route. accept source, destination and allow user to select bus type using radio button. provide express, slepper, ac, ac slepper bus as bus type 
+
+6) create checkout page for online shoping website. 
+
+7) create bootstrap page to display Car Detail using card. display car name, its price, no of seats, engine type and color. create function that return card. pass car object which has name,price,seats, and engine type 
