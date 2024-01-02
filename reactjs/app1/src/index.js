@@ -1,18 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+class life extends React.Component {
+    constructor(props) {
+        super(props);
+        console.log('constructor method is cllaed....');
+    }
 
+    componentWillMount() {
+        console.log('componentwillmount is called....');
+    }
+
+    render() {
+        console.log('render is called....',)
+        return (
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-12'>
+                        <h1>applife ciycle example</h1>
+                        <b>use console to see output</b>
+                        <hr />
+
+                    </div>
+                </div>
+            </div>
+        )
+    }
+    componentDidMount() {
+        console.log('componentDidMount is called.....', 'this use to called api###')
+    }
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
-var output = <div><h1>hello world</h1></div>;
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+root.render(<life />)

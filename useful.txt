@@ -2,6 +2,6 @@ use to creat effected curosel
 
 https://stackoverflow.com/questions/64731620/how-can-i-produce-this-hover-effect-onto-my-carousel
 
-best effected curosek this link
+best effected curosek this link redy to use see demo serch pals.html ma demo che redi hale che
 
 https://www.sliderrevolution.com/resources/css-hover-effects/
