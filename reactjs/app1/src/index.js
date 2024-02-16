@@ -1,33 +1,17 @@
-import React from 'react';
+import React,{useState} from 'react';
 import ReactDOM from 'react-dom/client';
-class life extends React.Component {
-    constructor(props) {
-        super(props);
-        console.log('constructor method is cllaed....');
-    }
-
-    componentWillMount() {
-        console.log('componentwillmount is called....');
-    }
-
-    render() {
-        console.log('render is called....',)
-        return (
-            <div className='container'>
-                <div className='row'>
-                    <div className='col-12'>
-                        <h1>applife ciycle example</h1>
-                        <b>use console to see output</b>
-                        <hr />
-
-                    </div>
-                </div>
-            </div>
-        )
-    }
-    componentDidMount() {
-        console.log('componentDidMount is called.....', 'this use to called api###')
-    }
-}
+import changepassword from './Changpassword'
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<life />)
+function Page() {
+    return (<div className='container'>
+        <div className='row'>
+            <div className='col-12'>
+                <h1>useState Hook</h1>
+            </div>
+        </div>
+        <div className='row mt-3'>
+            <changepassword />
+        </div>
+    </div>)
+}
+root.render(<Page />)

@@ -11,3 +11,13 @@
 6) create checkout page for online shoping website. 
 
 7) create bootstrap page to display Car Detail using card. display car name, its price, no of seats, engine type and color. create function that return card. pass car object which has name,price,seats, and engine type 
+
+
+
+9) create function components for change password using bootstrap 5. it should have 3 input. current password, new password and confirm new password if current password is 123123 and new and confirm new password is same. then display message password changed successfully else display message invalid password change attempt 
+
+10) create function components for forgot password using bootstrap 5. it should have 1 input which is email address. if user give admin@gmail.com as input. display message password sent to you on your registed email address 
+
+11) create class components for change password using bootstrap 5. it should have 3 input. current password, new password and confirm new password if current password is 123123 and new and confirm new password is same. then display message password changed successfully else display message invalid password change attempt 
+
+12) create class components for forgot password using bootstrap 5. it should have 1 input which is email address. if user give admin@gmail.com as input. display message password sent to you on your registed email address 

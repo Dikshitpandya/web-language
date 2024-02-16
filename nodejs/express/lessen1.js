@@ -5,9 +5,12 @@ var app = express();
 // પહેલા સર્વર on કરવા માટે ctrl + ` પ્રેસ કરો પછી cd nodejs  + press enter પછી cd express + press enter   પછી node lessen1.js 
 
 //define routes 
+// wampserver સારું કરો પછી browser માં 
 
     // રન કરવા માટે http://localhost:5000/ વેબ adress માં લખવું
 
+    // તેમ બાકીના પ્રોગ્રામ રન કરવા
+    
 app.get("/", function (request, response) {
     response.send(`<h1>State of india</h1><ul><li>Andhra Pradesh</li>
     <li>Arunachal Pradesh</li>

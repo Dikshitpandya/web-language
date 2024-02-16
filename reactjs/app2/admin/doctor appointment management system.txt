@@ -1,0 +1,65 @@
+Online Appointment Management system 
+----------------------------------------------
+
+types of users
+	Admin  -   only see not add
+	Doctor  -   add all assitant 
+	Assitant  - ther will see conform apoinment
+	Registered User - 
+
+1) Admin 
+	Login    //
+	Change password                            //
+	Forgot password  //
+	Doctor Management
+		- View Doctors //
+		- Message                     baki
+		- View Service            
+		- View Assitant
+		- View Appointment  //
+2) Doctor
+	Login     ok
+	Register   ok
+	Change password     ok in profile
+	Forgot password     ok
+	Update Profile     ok
+	 Service management     ok
+		Add, Edit, Delete, View 
+	Assitant management           ok
+		Add, Edit, Delete, View
+	Appointment management   ok
+		View, Print 
+		
+3) Assitant
+	Login     ok
+	Change password   ok
+	Forgot password ok
+	Appointment management    ok
+		View, Print, Change status 
+
+4) Registered User
+	Register
+	Login
+	Change password 
+	Forgot password
+	Search Doctor/Service 
+	Book Appointment
+	View Appointment
+		View upcoming appointment
+		View previous appointment (rating & reviews)
+		
+		
+Task to do 
+--------------------------
+	1) 1 theme for admin,Doctor & assitant 
+	2) 1 theme for Register user 
+	3) approval for theme from ankit 
+	4) after approval design pages as html pages 
+	5) publish project on github 
+	6) approval for pages 
+	7) after approval convert into to JSX with routing (functional)
+	8) Api calling 
+	9) publish on github
+	
+	
+		

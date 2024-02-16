@@ -295,3 +295,8 @@ select DISTINCT customerNumber from payments
 merge
 
 
+ColorZila
+WhatFont
+Awasome Screenshot
+wapplizer
+Palette creator 
